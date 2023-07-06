@@ -17,6 +17,9 @@ app.use((err, req, res, next) => {
 
 mongoose.connect(process.env.DATABASE_URI)
 
+console.log(process.env)
+console.log(process.env.DATABASE_URI)
+
 const productController = require('./controllers/productController')
 const deliveryController = require('./controllers/deliveryController')
 const scoreController = require('./controllers/scoreController')
