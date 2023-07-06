@@ -15,9 +15,6 @@ app.use((err, req, res, next) => {
     next()
 })
 
-console.log(process.env)
-console.log(process.env.DATABASE_URI)
-
 mongoose.connect(process.env.DATABASE_URI)
 
 const productController = require('./controllers/productController')
@@ -55,4 +52,9 @@ app.delete('/cart/clear/:userToken', cartController.clearCart)
 app.post('/cart/checkout', cartController.handleCheckout)
 app.post('/cart/checkout/confirm', cartController.handleConfirm)
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => { 
+    console.log({`Listening on port ${PORT}`)
+    console.log(3)        
+    console.log(process.env)
+    console.log(process.env.DATABASE_URI)  
+)
