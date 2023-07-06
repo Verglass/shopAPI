@@ -52,8 +52,4 @@ app.delete('/cart/clear/:userToken', cartController.clearCart)
 app.post('/cart/checkout', cartController.handleCheckout)
 app.post('/cart/checkout/confirm', cartController.handleConfirm)
 
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-    console.log(process.env)
-    console.log(process.env.DATABASE_URI)
-})
+app.listen(PORT, () => { console.log(`Listening on port ${PORT}`) })
