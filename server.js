@@ -15,10 +15,10 @@ app.use((err, req, res, next) => {
     next()
 })
 
-mongoose.connect(process.env.DATABASE_URI)
-
 console.log(process.env)
 console.log(process.env.DATABASE_URI)
+
+mongoose.connect(process.env.DATABASE_URI)
 
 const productController = require('./controllers/productController')
 const deliveryController = require('./controllers/deliveryController')
